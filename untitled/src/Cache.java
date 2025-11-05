@@ -23,6 +23,12 @@ public class Cache<T> {
     public boolean exists(T item) {
         return cacheList.contains(item);
     }
+    public T getFirst() {
+        if (cacheList.isEmpty()) {
+            return null;
+        }
+        return cacheList.getFirst();
+    }
 
 
 }
