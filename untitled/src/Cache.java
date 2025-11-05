@@ -20,6 +20,9 @@ public class Cache<T> {
     public boolean remove(T item) {
         return cacheList.remove(item);
     }
+    public boolean exists(T item) {
+        return cacheList.contains(item);
+    }
 
 
 }
