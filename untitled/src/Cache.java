@@ -20,9 +20,11 @@ public class Cache<T> {
     public boolean remove(T item) {
         return cacheList.remove(item);
     }
+
     public boolean exists(T item) {
         return cacheList.contains(item);
     }
+
     public T getFirst() {
         if (cacheList.isEmpty()) {
             return null;
@@ -37,5 +39,10 @@ public class Cache<T> {
         return cacheList.getLast();
     }
 
-
+    public T getItemByIndex(int i) {
+        if (i < 0 || i >= cacheList.size()) {
+            return null;
+        }
+        return cacheList.get(i);
+    }
 }
