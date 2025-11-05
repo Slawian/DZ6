@@ -10,12 +10,15 @@ public class Cache<T> {
         this.cacheList = new LinkedList<>();
     }
 
-
     public void add(T item) {
         if (cacheList.size() >= capacity) {
             cacheList.removeFirst();
         }
         cacheList.addLast(item);
+    }
+
+    public boolean remove(T item) {
+        return cacheList.remove(item);
     }
 
 
