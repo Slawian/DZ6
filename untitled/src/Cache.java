@@ -30,5 +30,12 @@ public class Cache<T> {
         return cacheList.getFirst();
     }
 
+    public T getLast() {
+        if (cacheList.isEmpty()) {
+            return null;
+        }
+        return cacheList.getLast();
+    }
+
 
 }
